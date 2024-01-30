@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pizza Order Form </title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body class = "background">
+        <div class = "title-container">
+            <h1> Pizza Order Form </h1>
+        </div> 
+        <div id = "fname-container">
+            <form>
+                <div class = "fname-container">
+                    <label for = "fname"> First Name: </label>
+                    <input type = "text" id = "fname" name = "fname"><br>
+                </div>
+    
+                <div class = "lname-container">
+                    <label for = "lname"> Last Name: </label>
+                    <input type = "text" id = "lname" name = "lname"><br>
+                </div>
+    
+                <div class = "email-container">
+                    <label for = "email"> Email Address: </label>
+                    <input type = "email" id = "email" name = "email"><br>
+                </div>
+    
+                <div class = "number-container">
+                    <label for = "number"> Contact Number: </label>
+                    <input type = "text" id = "number" name = "number"><br>
+                </div>
+    
+                <div class = "delivery-container">
+                    <label for = "delivery"> Preferred Delivery Date: </label>
+                    <input type = "date" id = "delivery" name = "delivery"><br>
+                </div>
+    
+                <div class = "size-container">
+                    <div class = "size-head">
+                        <p> Size: </p>
+                    </div>
+                    <input type = "radio" id = "small" name = "size" value = "Small">
+                    <label for = "small"> Small </label>
+                    <input type = "radio" id = "medium" name = "size" value = "Medium">
+                    <label for = "medium"> Medium </label>
+                    <input type = "radio" id = "large" name = "size" value = "Large">
+                    <label for = "large"> Large </label>
+                </div>
+    
+                <div class = "flavor-container">
+                    <div class = "flavor-head">
+                        <p> Flavor: </p>
+                    </div>
+                <input type = "checkbox" id = "flavor" name = "flavor" value = "Hawaiian">
+                <label for = "flavor"> Hawaiian (Php 150.00) </label>
+                <select id = "quantity" name = "quantity">
+                    <option value = "1"> 1 </option>
+                    <option value = "2"> 2 </option>
+                    <option value = "3"> 3 </option>
+                    <option value = "4"> 4 </option>
+                    <option value = "5"> 5 </option>
+                </select><br>
+                <input type = "checkbox" id = "flavor" name = "flavor" value = "Pepperoni">
+                <label for = "flavor"> Pepperoni (Php 140.00) </label>
+                <select id = "quantity" name = "quantity">
+                    <option value = "1"> 1 </option>
+                    <option value = "2"> 2 </option>
+                    <option value = "3"> 3 </option>
+                    <option value = "4"> 4 </option>
+                    <option value = "5"> 5 </option>
+                </select><br>
+                <input type = "checkbox" id = "flavor" name = "flavor" value = "Vegetable">
+                <label for = "flavor"> Vegetable (Php 150.00) </label>
+                <select id = "quantity" name = "quantity">
+                    <option value = "1"> 1 </option>
+                    <option value = "2"> 2 </option>
+                    <option value = "3"> 3 </option>
+                    <option value = "4"> 4 </option>
+                    <option value = "5"> 5 </option>
+                </select><br>
+                </div>
+    
+                <div class = "credit-container">
+                    <label for = "credit"> Credit Card Number: </label>
+                    <input type = "text" id = "credit" name = "credit"><br>
+                </div>
+    
+                <div class = "pin-container">
+                    <label for = "pin"> PIN: </label>
+                    <input type = "password" id = "pin" name = "pin"><br><br>
+                </div>
+    
+                <div class = "note-container">
+                    <label for = "longText"> Additional Note: </label><br>
+                    <textarea id = "longText" name = "longText" rows = "3" cols = "40" ></textarea><br>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
