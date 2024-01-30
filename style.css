@@ -1,0 +1,91 @@
+.background {
+    background-color: #f6f1a5;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-bottom: 35px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.title {
+    font-family: Inter;
+    text-align: center;
+    padding-top: 40px;
+    color: #ffb700;
+}
+
+.label {
+    font-family: Inter;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    margin-left: 40px;
+    padding-right: 20px;
+}
+
+.label-guide {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffa32c;
+}
+
+.text-box {
+    font-family: Inter;
+    font-size: 14px;
+    height: 40px;
+    width: 90%;
+    margin: 4px 0 10px 0;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+}
+
+
+.checkbox {
+    height: 15px;
+    align-content: flex-start;
+}
+
+
+.input-note {
+    font-family: Inter;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    height: 70px;
+    width: 90%;
+    margin: 4px 0 10px 0;
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid silver;
+}
+
+.submit-button {
+    font-size: 13px;
+    font-weight: bold;
+    width: 130px;
+    height: 40px;
+    margin-left: 50%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+    background: rgb(255, 157, 29);
+    cursor: pointer;
+    color: #ffffff;
+    transform: translateX(-50%);
+}
+
+.flavors{
+    display: flex;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+
+.quantity {
+    margin-right: 10px;
+}
