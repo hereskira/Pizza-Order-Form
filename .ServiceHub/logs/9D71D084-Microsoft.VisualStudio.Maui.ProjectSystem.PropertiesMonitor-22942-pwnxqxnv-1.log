@@ -1,0 +1,5 @@
+﻿04/13/2025 20:47:01 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/13/2025 20:47:01 Philippine Standard Time : Information : Added local RPC method "notifyPropertiesChanged" -> Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.NotifyPropertiesChangedAsync(String, String, PropertyValue[], CancellationToken) (Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor)
+04/13/2025 20:47:01 Philippine Standard Time : Information : Added local RPC method "Dispose" -> Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.Dispose() (Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor)
+04/13/2025 20:47:01 Philippine Standard Time: Information : 2 :Listening for events from Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.OnPropertiesChanged to raise notification.
+04/13/2025 20:47:01 Philippine Standard Time: Information : 3 :Listening started.

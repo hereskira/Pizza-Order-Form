@@ -1,0 +1,14 @@
+﻿04/13/2025 20:38:48 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "startWatching" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.StartWatchingAsync() (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "stopWatching" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.StopWatchingAsync() (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "getDevices" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.GetDevicesAsync(CancellationToken) (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "refreshDevices" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.RefreshDevicesAsync(CancellationToken) (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "setXcodePathOnVSSettings" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.SetXcodePathVSSettingsAsync(String) (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time : Information : Added local RPC method "Dispose" -> Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.Dispose() (Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager)
+04/13/2025 20:38:48 Philippine Standard Time: Information : 2 :Listening for events from Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.OnDeviceChanged to raise notification.
+04/13/2025 20:38:48 Philippine Standard Time: Information : 3 :Listening started.
+04/13/2025 20:46:38 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager read: end of stream
+04/13/2025 20:46:38 Philippine Standard Time : Information : Waiting for 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager' instance to complete its completionTask.
+04/13/2025 20:46:38 Philippine Standard Time: Information : 13 :Connection closing (RemotePartyTerminated: Reached end of stream.). 
+04/13/2025 20:46:38 Philippine Standard Time : Information : Disposed 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager' via 'completionTask' method.
+04/13/2025 20:46:38 Philippine Standard Time : Information : Finishing shutting down service: Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.

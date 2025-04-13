@@ -1,0 +1,4 @@
+﻿04/13/2025 20:46:59 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/13/2025 20:46:59 Philippine Standard Time : Information : Added local RPC method "Dispose" -> Microsoft.VisualStudio.Maui.UtilService.Dispose() (Microsoft.VisualStudio.Maui.UtilService)
+04/13/2025 20:46:59 Philippine Standard Time : Information : Added local RPC method "findFreeDebugPort" -> Microsoft.VisualStudio.Maui.UtilService.FindFreeDebugPortAsync(CancellationToken) (Microsoft.VisualStudio.Maui.UtilService)
+04/13/2025 20:46:59 Philippine Standard Time: Information : 3 :Listening started.

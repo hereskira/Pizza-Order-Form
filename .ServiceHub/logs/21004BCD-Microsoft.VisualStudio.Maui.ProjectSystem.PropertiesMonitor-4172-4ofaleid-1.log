@@ -1,0 +1,10 @@
+﻿04/09/2025 23:15:31 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "notifyPropertiesChanged" -> Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.NotifyPropertiesChangedAsync(String, String, PropertyValue[], CancellationToken) (Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "Dispose" -> Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.Dispose() (Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor)
+04/09/2025 23:15:31 Philippine Standard Time: Information : 2 :Listening for events from Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.OnPropertiesChanged to raise notification.
+04/09/2025 23:15:31 Philippine Standard Time: Information : 3 :Listening started.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor read: end of stream
+04/09/2025 23:15:44 Philippine Standard Time : Information : Waiting for 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor' instance to complete its completionTask.
+04/09/2025 23:15:44 Philippine Standard Time: Information : 13 :Connection closing (RemotePartyTerminated: Reached end of stream.). 
+04/09/2025 23:15:44 Philippine Standard Time : Information : Disposed 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor' via 'completionTask' method.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Finishing shutting down service: Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.

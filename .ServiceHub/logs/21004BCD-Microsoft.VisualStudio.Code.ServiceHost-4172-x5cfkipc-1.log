@@ -1,0 +1,156 @@
+﻿04/09/2025 23:15:28 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/09/2025 23:15:30 Philippine Standard Time : Information : Service Hub .NET service module host started. Host id: dotnet$C94B8CFE-E3FD-4BAF-A941-2866DBB566FE. Controller pipe: net.pipe://3885EF346C. PID: 4172
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr read: Content-Length: 116
+
+{"jsonrpc":"2.0","id":2,"method":"InitializeHostAsync","params":[{"HostsRootDirectory":".","AppConfigFallback":""}]}
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr write: Content-Length: 79
+
+{"jsonrpc":"2.0","id":2,"result":"dotnet$C94B8CFE-E3FD-4BAF-A941-2866DBB566FE"}
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr read: Content-Length: 875
+
+{"jsonrpc":"2.0","id":3,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.Maui.UtilService","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.UtilServiceFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/81fc0bdf61","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr read: Content-Length: 1076
+
+{"jsonrpc":"2.0","id":4,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.TestWindow.VSCode.Service","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll","fullClassName":"Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/2e07bc5e0f","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:30 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.Maui.UtilService'
+04/09/2025 23:15:30 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices'
+04/09/2025 23:15:30 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.Maui.UtilService'. Class: Microsoft.VisualStudio.Maui.UtilServiceFactory, Supported Version: 
+04/09/2025 23:15:30 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.Maui.UtilService'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/d8e140a458, Supported Version: 
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":3,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/d8e140a458"}
+04/09/2025 23:15:30 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.TestWindow.VSCode.Service'
+04/09/2025 23:15:30 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64'
+04/09/2025 23:15:30 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.TestWindow.VSCode.Service'. Class: Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory, Supported Version: 
+04/09/2025 23:15:30 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.TestWindow.VSCode.Service'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/a172469834, Supported Version: 
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":4,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/a172469834"}
+04/09/2025 23:15:30 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.Maui.UtilService'
+04/09/2025 23:15:30 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.TestWindow.VSCode.Service'
+04/09/2025 23:15:30 Philippine Standard Time : Information : hubHostClr write: Content-Length: 110
+
+{"jsonrpc":"2.0","method":"HostServicesStartedAsync","params":["dotnet$C94B8CFE-E3FD-4BAF-A941-2866DBB566FE"]}
+04/09/2025 23:15:30 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.TestWindow.VSCode.Service.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.Maui.UtilService.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.Maui.UtilServiceFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.Maui.UtilServiceFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.Maui.UtilServiceFactory' from factory
+04/09/2025 23:15:30 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:30 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' from factory
+04/09/2025 23:15:30 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.Maui.UtilServiceFactory' from factory
+04/09/2025 23:15:30 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr read: Content-Length: 909
+
+{"jsonrpc":"2.0","id":5,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/3f1cd6c0dd","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:31 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager'. Class: Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/5592c3541e, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":5,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/5592c3541e"}
+04/09/2025 23:15:31 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr read: Content-Length: 905
+
+{"jsonrpc":"2.0","id":6,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/3ae236e090","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:31 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:31 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager'. Class: Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/34d99d2cbd, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":6,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/34d99d2cbd"}
+04/09/2025 23:15:31 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr read: Content-Length: 933
+
+{"jsonrpc":"2.0","id":7,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll","fullClassName":"Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/2c060df405","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:31 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor'. Class: Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/bac9a9a3ef, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":7,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/bac9a9a3ef"}
+04/09/2025 23:15:31 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr read: Content-Length: 955
+
+{"jsonrpc":"2.0","id":8,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll","fullClassName":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/053178cb55","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:31 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService'. Class: Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/73a7e448de, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":8,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/73a7e448de"}
+04/09/2025 23:15:31 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr read: Content-Length: 1125
+
+{"jsonrpc":"2.0","id":9,"method":"StartServiceAsync","params":[{"name":"Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service","host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll","fullClassName":"Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory"}},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/4ac63b50b1","__servicehub__RequestedServiceVersion":"0.1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/09/2025 23:15:31 Philippine Standard Time : Information : CLR host received start request for service 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Loading service module assembly '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll' from '/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Starting service module 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service'. Class: Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : Started service 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service'. Pipe name: /Users/shakiraregalado/.ServiceHub/6ce28f2033/63d5d1bd43, Supported Version: 
+04/09/2025 23:15:31 Philippine Standard Time : Information : hubHostClr write: Content-Length: 92
+
+{"jsonrpc":"2.0","id":9,"result":"/Users/shakiraregalado/.ServiceHub/6ce28f2033/63d5d1bd43"}
+04/09/2025 23:15:31 Philippine Standard Time : Information : A new client connected to CLR service module 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service'
+04/09/2025 23:15:31 Philippine Standard Time : Information : Found FactoryVersion=Version2 for service : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Service 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' implements IServiceHubServiceFactory. Creating factory instance and caching it.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Creating service Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory from factory with FactoryVersion=Version2 and ClientRequestedVersion=0.1.
+04/09/2025 23:15:31 Philippine Standard Time : Information : Setting up RPC connection for service 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' from factory
+04/09/2025 23:15:31 Philippine Standard Time : Information : Completed RPC connection setup for service 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' from factory
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.UtilServiceFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.UtilServiceFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.UtilServiceFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory' implements System.IDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' implements Microsoft.VisualStudio.Threading.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : hubHostClr write: Content-Length: 108
+
+{"jsonrpc":"2.0","method":"HostServicesEndedAsync","params":["dotnet$C94B8CFE-E3FD-4BAF-A941-2866DBB566FE"]}
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' implements System.IAsyncDisposable.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Checking if 'Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory' implements System.IDisposable.
+04/09/2025 23:15:54 Philippine Standard Time : Information : hubHostClr read: Content-Length: 58
+
+{"jsonrpc":"2.0","id":10,"method":"ExitAsync","params":[]}
+04/09/2025 23:15:54 Philippine Standard Time : Information : Exit command received. Exiting CLR host
+04/09/2025 23:15:54 Philippine Standard Time : Information : hubHostClr write: Content-Length: 39
+
+{"jsonrpc":"2.0","id":10,"result":null}
+04/09/2025 23:15:54 Philippine Standard Time : Information : hubHostClr JSON RPC has been disposed
+04/09/2025 23:15:54 Philippine Standard Time : Information : hubHostClr read: end of stream

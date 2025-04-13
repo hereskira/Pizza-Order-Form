@@ -1,0 +1,69 @@
+﻿04/09/2025 23:15:31 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "getPipe" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.GetPipeAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "getProxy" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.GetProxyAsync(ServiceRpcDescriptor, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "handshake" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.HandshakeAsync(ServiceBrokerClientMetadata, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "requestServiceChannel" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "cancelServiceRequest" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.CancelServiceRequestAsync(Guid) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "getPipe" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.GetPipeAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "getProxy" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.GetProxyAsync(ServiceRpcDescriptor, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "handshake" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.HandshakeAsync(ServiceBrokerClientMetadata, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "requestServiceChannel" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time : Information : Added local RPC method "cancelServiceRequest" -> Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.CancelServiceRequestAsync(Guid) (Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View)
+04/09/2025 23:15:31 Philippine Standard Time: Information : 2 :Listening for events from Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.AvailabilityChanged to raise notification.
+04/09/2025 23:15:31 Philippine Standard Time: Information : 3 :Listening started.
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":2,"method":"handshake"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "2" for method "handshake".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.HandshakeAsync(ServiceBrokerClientMetadata, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : handshake
+04/09/2025 23:15:31 Philippine Standard Time : Stop : handshake
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":2}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":3,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "3" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":3}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":4,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "4" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":5,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "5" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":4}
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":5}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":6,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "6" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":7,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "7" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":6}
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":7}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 7 :{"id":8,"method":"requestServiceChannel"}
+04/09/2025 23:15:31 Philippine Standard Time: Information : 6 :Received request "8" for method "requestServiceChannel".
+04/09/2025 23:15:31 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:31 Philippine Standard Time : Transfer : Transfer, relatedActivityId=8d08c231-6ffe-4be4-9f4e-65a3814b4488
+04/09/2025 23:15:31 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:31 Philippine Standard Time : Transfer : Transfer, relatedActivityId=641e32e5-a2c6-4355-b119-5dd7b0762ffe
+04/09/2025 23:15:31 Philippine Standard Time: Information : 8 :{"id":8}
+04/09/2025 23:15:32 Philippine Standard Time: Information : 7 :{"id":9,"method":"requestServiceChannel"}
+04/09/2025 23:15:32 Philippine Standard Time: Information : 6 :Received request "9" for method "requestServiceChannel".
+04/09/2025 23:15:32 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:32 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:32 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:32 Philippine Standard Time: Information : 8 :{"id":9}
+04/09/2025 23:15:32 Philippine Standard Time: Information : 7 :{"id":10,"method":"requestServiceChannel"}
+04/09/2025 23:15:32 Philippine Standard Time: Information : 6 :Received request "10" for method "requestServiceChannel".
+04/09/2025 23:15:32 Philippine Standard Time: Information : 9 :Invoking Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer+View.RequestServiceChannelAsync(ServiceMoniker, ServiceActivationOptions, CancellationToken)
+04/09/2025 23:15:32 Philippine Standard Time : Start : requestServiceChannel
+04/09/2025 23:15:32 Philippine Standard Time : Stop : requestServiceChannel
+04/09/2025 23:15:32 Philippine Standard Time: Information : 8 :{"id":10}

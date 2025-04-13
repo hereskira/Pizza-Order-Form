@@ -1,0 +1,9 @@
+﻿04/09/2025 23:15:30 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/09/2025 23:15:30 Philippine Standard Time : Information : Added local RPC method "Dispose" -> Microsoft.VisualStudio.Maui.UtilService.Dispose() (Microsoft.VisualStudio.Maui.UtilService)
+04/09/2025 23:15:30 Philippine Standard Time : Information : Added local RPC method "findFreeDebugPort" -> Microsoft.VisualStudio.Maui.UtilService.FindFreeDebugPortAsync(CancellationToken) (Microsoft.VisualStudio.Maui.UtilService)
+04/09/2025 23:15:30 Philippine Standard Time: Information : 3 :Listening started.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.UtilService read: end of stream
+04/09/2025 23:15:44 Philippine Standard Time : Information : Waiting for 'Microsoft.VisualStudio.Maui.UtilService' instance to complete its completionTask.
+04/09/2025 23:15:44 Philippine Standard Time: Information : 13 :Connection closing (RemotePartyTerminated: Reached end of stream.). 
+04/09/2025 23:15:44 Philippine Standard Time : Information : Disposed 'Microsoft.VisualStudio.Maui.UtilService' via 'completionTask' method.
+04/09/2025 23:15:44 Philippine Standard Time : Information : Finishing shutting down service: Microsoft.VisualStudio.Maui.UtilService.

@@ -1,0 +1,480 @@
+﻿04/13/2025 20:46:54 Philippine Standard Time : Information : Local timezone is (UTC+08:00) Philippine Standard Time (Manila)
+04/13/2025 20:46:55 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 109
+
+{"jsonrpc":"2.0","id":2,"method":"UpdateClientInfoAsync","params":[{"clientName":"VsHubClient","pid":21729}]}
+04/13/2025 20:46:55 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 474
+
+{"jsonrpc":"2.0","id":2,"result":{"ClientWatchServerName":"net.pipe://2263259E03","ControllerConfig":{"Executable":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-code-servicecontroller.darwin-arm64/Microsoft.VisualStudio.Code.ServiceController","Args":["58dbfb7b72"],"PipeName":"58dbfb7b72"},"HostsConfig":{"RootDir":".","AppConfigFallback":""}}}
+04/13/2025 20:46:55 Philippine Standard Time : Information : Connected to Hub Controller's client watch 'net.pipe://2263259E03
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 109
+
+{"jsonrpc":"2.0","id":2,"method":"UpdateClientInfoAsync","params":[{"clientName":"VsHubClient","pid":21729}]}
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 474
+
+{"jsonrpc":"2.0","id":2,"result":{"ClientWatchServerName":"net.pipe://2263259E03","ControllerConfig":{"Executable":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-code-servicecontroller.darwin-arm64/Microsoft.VisualStudio.Code.ServiceController","Args":["58dbfb7b72"],"PipeName":"58dbfb7b72"},"HostsConfig":{"RootDir":".","AppConfigFallback":""}}}
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 13984
+
+
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController write: {"jsonrpc":"2.0","id":3,"method":"RegisterServicesAsync","params":[{"Microsoft.VisualStudio.CpsProjectIconSourceService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.ProjectIconSourceServiceFactory"}},"Microsoft.VisualStudio.LaunchConfigurationService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.LaunchConfigurationServiceFactory"}},"Microsoft.VisualStudio.ProjectSystem.CompositionService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.CompositionServiceFactory"}},"Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.ProjectInitializationStatusServiceFactory"}},"Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.ProjectTreeProviderFactory"}},"Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/CPS/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-projectsystem-server.darwin-arm64/Microsoft.VisualStudio.ProjectSystem.Server.Implementation.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Server.QueryExecutionServiceFactory"}},"Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll","fullClassName":"Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service.ProjectSystemProviderServiceFactory"}},"Microsoft.VisualStudio.TestWindow.VSCode.Service":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/VSUnitTesting/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-testwindow-vscode-service.darwin-arm64/Microsoft.VisualStudio.TestWindow.VSCode.Service.dll","fullClassName":"Microsoft.VisualStudio.TestWindow.VSCode.Service.TestWindowVSCodeServiceFactory"}},"Microsoft.VisualStudio.AspireRunSettingService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services/Microsoft.WebTools.Aspire.VSCode.Services.dll","fullClassName":"Microsoft.WebTools.Aspire.VSCode.Services.AspireRunSettingServiceFactory"},"friendServices":["Microsoft.VisualStudio.ProjectSystem.CompositionService"]},"Microsoft.VisualStudio.AspireServer":{"host":"dotnet.aspireServer","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services/Microsoft.WebTools.AspireServer.dll","fullClassName":"Microsoft.WebTools.AspireServer.ServiceFactory"}},"Microsoft.VisualStudio.Debugger.AspireService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Services/Microsoft.WebTools.Aspire.VSCode.Services.dll","fullClassName":"Microsoft.WebTools.Aspire.VSCode.Services.AspireDebugServiceFactory"},"friendServices":["Microsoft.VisualStudio.ProjectSystem.CompositionService"]},"Microsoft.VisualStudio.WebTools.CssVisualDiagnosticsService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/WebTools/node_modules/@microsoft/vscode.webtools/Microsoft.WebTools.ProjectSystem.VSCode.dll","fullClassName":"Microsoft.WebTools.ProjectSystem.VSCode.VisualDiagnostics.CssVisualDiagnosticsFactory"},"friendServices":["Microsoft.VisualStudio.ProjectSystem.CompositionService"]},"Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService":{"host":"dotnet.projectSystem","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/dotnet-project-system-vscode/node_modules/@microsoft/vscode.projectsystem.managed/Services","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/dotnet-project-system-vscode/node_modules/@microsoft/vscode.projectsystem.managed/Services/Microsoft.ProjectSystem.Managed.VSCode.Services.dll","fullClassName":"Microsoft.VisualStudio.ProjectSystem.Services.DebugTargetFrameworkServiceFactory"},"friendServices":["Microsoft.VisualStudio.ProjectSystem.CompositionService"]},"Microsoft.VisualStudio.ProjectQueryTestService":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-server-samples-sayhello.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-server-samples-sayhello.darwin-arm64/Microsoft.VisualStudio.Samples.SayHello.dll","fullClassName":"Microsoft.VisualStudio.Samples.SayHello.ProjectQueryTestServiceFactory"}},"helloServiceHubDotNetHost":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-server-samples-sayhello.darwin-arm64","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.csdevkit-1.18.23-darwin-arm64/components/vs-green-server/platforms/darwin-arm64/node_modules/@microsoft/visualstudio-server-samples-sayhello.darwin-arm64/Microsoft.VisualStudio.Samples.SayHello.dll","fullClassName":"Microsoft.VisualStudio.Samples.SayHello.HelloWorldFactory"}},"Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManagerFactory"}},"Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.Devices.AppleDeviceManagerFactory"}},"Microsoft.VisualStudio.Maui.UtilService":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiDevices/Microsoft.VisualStudio.Maui.Devices.dll","fullClassName":"Microsoft.VisualStudio.Maui.UtilServiceFactory"}},"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll","fullClassName":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationServiceFactory"}},"Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor":{"host":"dotnet","hostId":"C94B8CFE-E3FD-4BAF-A941-2866DBB566FE","serviceBaseDirectory":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem","entryPoint":{"assemblyPath":"/Users/shakiraregalado/.vscode/extensions/ms-dotnettools.dotnet-maui-1.9.21-darwin-arm64/dist/components/MicrosoftVisualStudioMauiProjectSystem/Microsoft.VisualStudio.Maui.ProjectSystem.dll","fullClassName":"Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitorFactory"}}}]}
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 38
+
+{"jsonrpc":"2.0","id":3,"result":null}
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 364
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a88574a126"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:46:56 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 356
+
+{"jsonrpc":"2.0","id":4,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.TestWindow.VSCode.Service","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/01decf76e3"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}Content-Length: 347
+
+{"jsonrpc":"2.0","id":6,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.UtilService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/54917cad0d"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}Content-Length: 341
+
+{"jsonrpc":"2.0","id":5,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.LaunchConfigurationService"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/f5c702fb9e"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}Content-Length: 379
+
+{"jsonrpc":"2.0","id":7,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/1a6ca87fc3"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:46:57 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 379
+
+{"jsonrpc":"2.0","id":8,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c7de1faca8"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:46:58 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 381
+
+{"jsonrpc":"2.0","id":9,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService","Version":"0.3"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/b1abac394d"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 172
+
+{"jsonrpc":"2.0","id":4,"result":{"RequestId":"e42e8511-95f5-4f3d-8ef3-f9e16859a16d","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/f399cc4ca5","IsEmpty":false}}Content-Length: 172
+
+{"jsonrpc":"2.0","id":6,"result":{"RequestId":"e03140dc-839e-47bd-85a2-fb84134a3b8d","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/4c8f21c01a","IsEmpty":false}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/01decf76e3'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.Service-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/54917cad0d'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.UtilService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 172
+
+{"jsonrpc":"2.0","id":9,"result":{"RequestId":"c57e6a83-c143-414c-9e59-d60bbb57daa7","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/122e853443","IsEmpty":false}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.Service-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.UtilService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 172
+
+{"jsonrpc":"2.0","id":8,"result":{"RequestId":"999c8e04-453c-4e5e-8e86-3f08c5679f4d","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/477620238c","IsEmpty":false}}Content-Length: 172
+
+{"jsonrpc":"2.0","id":7,"result":{"RequestId":"d10bcbc4-b66f-4954-b7b3-1dada432ed14","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/ad569689a9","IsEmpty":false}}Content-Length: 172
+
+{"jsonrpc":"2.0","id":5,"result":{"RequestId":"9f632c29-3750-4cc1-85a0-64c6685a65ef","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/395553115a","IsEmpty":false}}Content-Length: 172
+
+{"jsonrpc":"2.0","id":3,"result":{"RequestId":"4ba3c334-7512-454f-b959-e0a5bdee7046","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/baa1f36dba","IsEmpty":false}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/b1abac394d'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c7de1faca8'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a88574a126'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/1a6ca87fc3'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/f5c702fb9e'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"e9c16326-9a97-424c-a957-364109764261","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/b7605af894f442cdbec51d03362b5a1d"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.UtilService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.Service-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.UtilService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"6bbb9e2f-f583-49f9-a2a5-583bb12f5213","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/547b4f4076db467f9d953edf942afada"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectTreeProvider-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"0bc189ab-60b4-42bb-8938-7779de3d82a0","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/6367e83b63a04adc8f89568516b30c4c"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"9d21c442-c731-4ffb-a103-fe5a0683f128","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/6385e797b9554336a559610a8bd286f5"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"fa7b9fef-e3d5-4a17-8a80-0e4891736ce1","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/7ce3a16bac844c0fb79bdf4953a10422"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"e8fbb882-bdd5-4dac-809a-e64b8a335fc6","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/6868927382ba4f9d860da653774c445c"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.Service-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"55e4ade5-e9a5-4a5f-9a2f-bd4d481862ee","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/b10f3a01a72d442ea9308a1dd4635aad"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer read: Content-Length: 203
+
+{"jsonrpc":"2.0","id":4,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.ProjectSystem.CompositionService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 364
+
+{"jsonrpc":"2.0","id":10,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.CompositionService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/8b79ae37f7"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":10,"result":{"RequestId":"1830e0a3-9573-4c94-962f-2f2ae344887f","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a2b0a05a81","IsEmpty":false}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.LaunchConfigurationService-RemoteServiceBrokerServer write: Content-Length: 156
+
+{"jsonrpc":"2.0","id":4,"result":{"requestId":"1830e0a3-9573-4c94-962f-2f2ae344887f","pipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a2b0a05a81"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/8b79ae37f7'.
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"a13458b8-97ad-4636-bb54-84316c365707","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/e379f270a1d14d398b8527a66be207cb"}}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 197
+
+{"jsonrpc":"2.0","id":4,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.NoDelay.EnvironmentService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}Content-Length: 194
+
+{"jsonrpc":"2.0","id":5,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.ComponentExportsService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:46:59 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":4,"result":{"requestId":"908be12e-3842-48be-816e-eef819ffe7f2","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/50c0c844498c47d4827baeda35e90b65"}}Content-Length: 181
+
+{"jsonrpc":"2.0","id":5,"result":{"requestId":"c1a73bca-13c7-47ad-b18b-b9290b00fb17","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/648541db2bcd4812babf872570b2c170"}}
+04/13/2025 20:47:00 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 365
+
+{"jsonrpc":"2.0","id":11,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/2f046989d7"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":11,"result":{"RequestId":"273bc538-19d8-4cb4-b4b5-30c731804d9b","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/61481e5843","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/2f046989d7'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 363
+
+{"jsonrpc":"2.0","id":12,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/8eb5ffb0cb"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AndroidDeviceManager-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"2290d00b-6b2a-4311-899a-046b21fcaf31","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/8c5f93708dc44ef7b15cbe3ac0b8c2ac"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":12,"result":{"RequestId":"33304405-3e72-4f5b-928e-e7627fdec129","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/385b3aaae5","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/8eb5ffb0cb'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 368
+
+{"jsonrpc":"2.0","id":13,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/78d304a855"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":13,"result":{"RequestId":"9ec7b18a-866e-443d-9065-434ecd011b95","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/919e1e8c69","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/78d304a855'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 379
+
+{"jsonrpc":"2.0","id":14,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/4e63d5cd01"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":14,"result":{"RequestId":"57bb5781-c029-429e-b07c-78f0feb34e48","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/8a09cde565","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/4e63d5cd01'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 380
+
+{"jsonrpc":"2.0","id":15,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/86423b2403"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":15,"result":{"RequestId":"11f1967d-8c9c-4d8f-a0c1-b1cb29a18650","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/b2a833b467","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 382
+
+{"jsonrpc":"2.0","id":16,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService","Version":"0.2"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/01d261e315"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/86423b2403'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.Devices.AppleDeviceManager-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"ef91acff-8ecd-4f98-9654-bb2c957fdf0f","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/940df8050eee4d7d8b6eafc5b9c82093"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"732d6d39-9ba7-46ab-8b0c-44068f3f5b28","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/b93e7399c70a438c82e6e45e6ae3fbc8"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":16,"result":{"RequestId":"be24058d-2eaf-4328-aa5e-828f51a10484","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/6b6aa7feaa","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"f7017860-2049-494d-a82a-13aa63d13cae","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/8cc604cfafea453c86cc4cea2dacf78f"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.PropertiesMonitor-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"bdf0a539-aeb0-4339-a4eb-969b033c0957","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/26521206ba3d4e9bb8ce233ad03f3b4c"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/01d261e315'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"3fd0c70a-cb30-4875-aeb6-f7973f17ee28","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/8dbe55391f8a4c44b22def9d33b69857"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 242
+
+{"jsonrpc":"2.0","id":6,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.NuGetSolutionRestoreService","version":"0.1"},{"activationArguments":{"needEvents":"True"},"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 204
+
+{"jsonrpc":"2.0","id":7,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.ActiveDocumentsInformationService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}Content-Length: 270
+
+{"jsonrpc":"2.0","id":8,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.CpsProjectIconSourceService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}],"traceparent":"00-364de3904ae1404684e77808b2c175a6-6e9ba946a410d245-00"}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":6,"result":{"requestId":"c4ae8615-cc56-40e2-915e-0235760c769c","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/fd4c8d30bea64a4fb956a55dad8aaefd"}}Content-Length: 181
+
+{"jsonrpc":"2.0","id":7,"result":{"requestId":"846f979c-9e78-41f0-8861-57904263fe50","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/62894ace031e49c4a5f456f89885c92c"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 359
+
+{"jsonrpc":"2.0","id":17,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.CpsProjectIconSourceService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/d4214d7680"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":17,"result":{"RequestId":"fe64d29e-7eac-49d1-9bf0-3fbe43e417b4","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/38625fdad8","IsEmpty":false}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 156
+
+{"jsonrpc":"2.0","id":8,"result":{"requestId":"fe64d29e-7eac-49d1-9bf0-3fbe43e417b4","pipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/38625fdad8"}}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/d4214d7680'.
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.CpsProjectIconSourceService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.CpsProjectIconSourceService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.CpsProjectIconSourceService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:01 Philippine Standard Time : Information : Microsoft.VisualStudio.CpsProjectIconSourceService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"3b586ed7-0a24-4f98-b8f2-660ac8e2b63a","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/e534222df8bb4e7ba6f39bb1ceafa634"}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 379
+
+{"jsonrpc":"2.0","id":18,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c3e2b524c1"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 249
+
+{"jsonrpc":"2.0","id":9,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.LogOutputChannelService","version":"0.1"},{"activationArguments":{"outputChannelName":"Projects"},"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":9,"result":{"requestId":"f368313f-daee-47eb-9fc5-0a69bb956716","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/310a647f76e240aea843a97471b3ec4d"}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":18,"result":{"RequestId":"6c9c29c9-e10c-4de5-8b08-d9fa44acaaff","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/6fb5806139","IsEmpty":false}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c3e2b524c1'.
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"40ae0cb9-2281-428d-a8c0-4ac0e9720f88","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/35ef4e4ae34343a293751deb9c97f3c1"}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer read: Content-Length: 293
+
+{"jsonrpc":"2.0","id":4,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService","version":"0.3"},{"clientCulture":"en-US","clientUICulture":"en-US"}],"traceparent":"00-25acc24872b8d54eaafbac19465fcd37-02b53382561f8d44-00"}
+04/13/2025 20:47:02 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 382
+
+{"jsonrpc":"2.0","id":19,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService","Version":"0.3"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/3c2aa40776"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":19,"result":{"RequestId":"5bb5ec2a-1591-4566-934d-8f6abafa2319","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c8e38ea90b","IsEmpty":false}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.TestWindow.VSCode.ProjectSystemProvider.Service-RemoteServiceBrokerServer write: Content-Length: 156
+
+{"jsonrpc":"2.0","id":4,"result":{"requestId":"5bb5ec2a-1591-4566-934d-8f6abafa2319","pipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c8e38ea90b"}}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/3c2aa40776'.
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:02 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.Query.Remoting.QueryExecutionService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"0e8aed53-7edb-49b1-bbf9-40e66bd29774","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/05315117d96e4c578f7fbe0617104941"}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 219
+
+{"jsonrpc":"2.0","id":10,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 379
+
+{"jsonrpc":"2.0","id":20,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/21d488e952"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":20,"result":{"RequestId":"dcfc3689-6cd8-4c71-8e71-830db579bc7b","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c2459c9c8e","IsEmpty":false}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 157
+
+{"jsonrpc":"2.0","id":10,"result":{"requestId":"dcfc3689-6cd8-4c71-8e71-830db579bc7b","pipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/c2459c9c8e"}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/21d488e952'.
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.Maui.ProjectSystem.MauiLaunchInformationService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"97801813-1631-46b1-8449-3bcf79178ac6","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/2618beb1693b4249a8b2788b3e258e7c"}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 198
+
+{"jsonrpc":"2.0","id":11,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.NoDelay.EnvironmentService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 182
+
+{"jsonrpc":"2.0","id":11,"result":{"requestId":"e5df0b7a-dbe7-43e7-87d5-f5681617c303","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/54ec959f130e4418823ceb5163954b4b"}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 203
+
+{"jsonrpc":"2.0","id":12,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.LanguageServices.WorkspaceProjectFactoryService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 380
+
+{"jsonrpc":"2.0","id":21,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a05f92e37f"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":21,"result":{"RequestId":"fe53fc61-9baa-459e-b94b-a91321f71618","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/1f26171bc8","IsEmpty":false}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/a05f92e37f'.
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.ProjectInitializationStatusService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"1d4b5b97-5ed0-43be-ac09-04a2d31ff7de","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/d7972db322d34af1abbe0ffc5a66b674"}}
+04/13/2025 20:47:03 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 182
+
+{"jsonrpc":"2.0","id":12,"result":{"requestId":"55b6449c-7af4-4816-9cb6-69a83afdeb4b","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/da04b569eceb4c5b9cb9b7b9e6a99a01"}}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer read: Content-Length: 199
+
+{"jsonrpc":"2.0","id":13,"method":"requestServiceChannel","params":[{"name":"Microsoft.VisualStudio.NuGetSolutionRestoreService","version":"0.1"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.CompositionService-RemoteServiceBrokerServer write: Content-Length: 182
+
+{"jsonrpc":"2.0","id":13,"result":{"requestId":"a6fd078f-7df0-4efa-abe8-efaac9474b1e","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/68fbda7dde214ec9bf29d065de9bae4a"}}
+04/13/2025 20:47:05 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 373
+
+{"jsonrpc":"2.0","id":22,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/e5e580c58a"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : VsHubClient-hubController write: Content-Length: 373
+
+{"jsonrpc":"2.0","id":23,"method":"requestServiceChannel","params":[{"Name":"Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService","Version":"0.1"},{"ActivationArguments":{"__servicehub__ServiceHubRemoteServiceBrokerPipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/17dc3efb23"},"ClientCredentials":{},"ClientCulture":"en-US","ClientUICulture":"en-US"}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : VsHubClient-hubController read: Content-Length: 173
+
+{"jsonrpc":"2.0","id":23,"result":{"RequestId":"95a4c153-1bfd-428a-9ecb-c0bcf959daf5","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/e3e745686a","IsEmpty":false}}Content-Length: 173
+
+{"jsonrpc":"2.0","id":22,"result":{"RequestId":"f3ea0d66-6984-4ee1-a74a-beec78638279","PipeName":"/Users/shakiraregalado/.ServiceHub/58dbfb7b72/ea570297a5","IsEmpty":false}}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/e5e580c58a'.
+04/13/2025 20:47:05 Philippine Standard Time : Information : Disposing ServiceBroker server '/Users/shakiraregalado/.ServiceHub/58dbfb7b72/17dc3efb23'.
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer read: Content-Length: 193
+
+{"jsonrpc":"2.0","id":2,"method":"handshake","params":[{"supportedConnections":"IpcPipe","localServiceHost":{"operatingSystem":2,"processArchitecture":3,"runtime":2,"runtimeVersion":"9.0.4"}}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer write: Content-Length: 38
+
+{"jsonrpc":"2.0","id":2,"result":null}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer read: Content-Length: 183
+
+{"jsonrpc":"2.0","id":3,"method":"requestServiceChannel","params":[{"name":"Microsoft.ServiceHub.Framework.AuthorizationService"},{"clientCulture":"en-US","clientUICulture":"en-US"}]}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"26274648-008b-4bc1-9b0e-63c8b8de1df2","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/bbfc63c1969149a48fe1794f4eafa490"}}
+04/13/2025 20:47:05 Philippine Standard Time : Information : Microsoft.VisualStudio.ProjectSystem.DebugTargetFrameworkService-RemoteServiceBrokerServer write: Content-Length: 181
+
+{"jsonrpc":"2.0","id":3,"result":{"requestId":"10ef830f-572b-4561-afb9-ef475d7b1011","pipeName":"/var/folders/hp/ty1nf2l1291917znhj6py4p40000gn/T/2b54f3d45b8f42bea1172ffe355f12b0"}}
