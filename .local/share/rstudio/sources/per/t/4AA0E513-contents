@@ -1,0 +1,125 @@
+#Install the following packages first
+install.packages("ISLR")
+install.packages("ggplot2")
+install.packages("caret")
+
+#Access the installed libraries.
+library("ISLR")
+library("ggplot2")
+library("caret")
+
+#An example of a dataframe
+mtcars
+
+#Call in the dataset Wage from ISLR.
+data(Wage)
+
+#To find the columns inside the dataset
+str(Wage)
+colnames(Wage)
+Wage
+
+#To access one column from the Wage dataset
+Wage$age
+Wage$jobclass
+Wage$race
+Wage$health_ins
+
+#Descriptive Statistics
+#Getting the mean and the median
+mean(Wage$age)
+mean(Wage$wage)
+median(Wage$age)
+median(Wage$wage)
+
+#Getting the sum
+sum(Wage$age)
+sum(Wage$wage)
+
+#Other operators
+#Variance
+var(Wage$age)
+#Standard Deviation
+sqrt(var(Wage$age))
+
+#Descriptive Statistics summary of the Wage Dataset
+summary(Wage)
+
+#Indexing features of the dataset. head returns 1st 6 rows
+head(Wage)
+
+#Row 3, Column 11
+Wage[3,11]
+Wage[3,]
+#Row 1 to 3 and column 1 to 3
+Wage[1:3,1:3]
+
+#Removes the 4th and 9th column and store it in reduced wage variable
+reducedwage <- Wage[,-c(4,9)]
+head(reducedwage)
+nrow(reducedwage)
+ncol(reducedwage)
+
+#Only select rows with health Very Good
+reducedwage <- reducedwage[which(reducedwage$health=='2. >=Very Good'),]
+head(reducedwage)
+
+#Drop column Health or column 7, drop job class column
+reducedwage <- reducedwage[,-c(6, 7)]
+head(reducedwage)
+
+#Option to not print in exponential notation
+options("scipen"=100, "digits"=4)
+head(reducedwage)
+
+#plot only one numerical column
+plot(reducedwage$wage)
+
+#Plot only one categorical/factor column
+plot(reducedwage$maritl)
+
+#plot two columns produces a box plot
+plot(reducedwage$education, reducedwage$wage)
+
+#plot everything in one graph
+plot(reducedwage)
+pairs(reducedwage)
+
+#plot a histogram
+hist(reducedwage$age)
+hist(reducedwage$wage)
+
+#plotting arguments
+plot(reducedwage$age, type = 'o', main='Plot of wages', xlab='ID', ylab='wages')
+
+#To know more about arguments of plot functions
+help("plot")
+?(plot)
+
+library("ggplot2")
+#scatterplot of age vs. wages for each combination of marital status and year
+qplot(reducedwage$age, reducedwage$wage, data=reducedwage, color=maritl, xlab="Age, ylab=wages")
+qplot(reducedwage$age, reducedwage$wage, data=reducedwage, color=maritl, facets=maritl~year, xlab="Age, ylab=wages")
+
+#Line plot using ggplot
+qplot(reducedwage$age,
+      reducedwage$wage,
+      data=reducedwage,geom=c("point","smooth"), xlab="Age",
+      ylab="Wages")
+#Boxplot using ggplot
+qplot(reducedwage$maritl,
+      reducedwage$wage,
+      data=reducedwage,geom=c("boxplot")
+      ,fill=as.factor(maritl),
+      xlab="Marital Status",
+      ylab="Wages")
+#Simple Regression Analysis
+#Initialize plot parameters
+par(mfrow=c(2,2))
+#Create the linear model
+simplelrfit = lm(wage~age, data=reducedwage)
+summary(simplelrfit)
+plot(simplelrfit)
+
+
+

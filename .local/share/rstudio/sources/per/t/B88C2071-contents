@@ -1,0 +1,97 @@
+---
+title: "Penguin Data Analysis"
+author: "Shakira Regalado"
+date: "2024-11-18"
+output: html_document
+---
+
+## Scale of Measurement
+
+- **Species, Island, Sex**: Nominal
+- **Bill length (mm), Bill depth (mm), Flipper length (mm), Body mass (g)**: Ratio
+- **Year**: Ordinal
+
+## Missing Values
+```{r}
+# Set CRAN mirror for package installation
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+
+# Load necessary libraries
+install.packages("palmerpenguins")
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("corrplot")
+install.packages("tidyr")
+install.packages("skimr")
+install.packages("readr")
+
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(corrplot)
+library(tidyr)
+library(skimr)
+library(readr)
+
+# Load the penguin dataset
+penguins <- read_csv(path_to_file("penguins.csv"))
+
+# Check for missing values in the dataset
+missing_data <- sapply(penguins, function(x) sum(is.na(x))/length(x))
+missing_data
+```
+
+# Display basic summary statistics for the dataset
+```{r}
+skim(penguins)
+``` 
+
+# Group the data by species and calculate average values
+```{r}
+penguins_grouped_species <- penguins %>%
+  group_by(species) %>%
+  summarise(
+    avg_bill_length = mean(bill_length_mm, na.rm = TRUE),
+    avg_bill_depth = mean(bill_depth_mm, na.rm = TRUE),
+    avg_flipper_length = mean(flipper_length_mm, na.rm = TRUE),
+    avg_body_mass = mean(body_mass_g, na.rm = TRUE)
+  )
+
+penguins_grouped_species
+```
+
+# Correlation Matrix
+```{r}
+# Compute correlation matrix for numerical variables
+correlation_matrix <- cor(penguins %>% select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g), use = "complete.obs")
+
+# Display the correlation matrix
+correlation_matrix
+
+# Visualize the correlation matrix
+corrplot(correlation_matrix, method = "circle")
+```
+
+# Plot histogram of bill length
+```{r}
+ggplot(penguins, aes(x = bill_length_mm)) +
+  geom_histogram(binwidth = 1, fill = "blue", color = "black", alpha = 0.7) +
+  theme_minimal() +
+  labs(title = "Histogram of Bill Length")
+```
+
+# Plot boxplot of bill length by species
+```{r}
+ggplot(penguins, aes(x = species, y = bill_length_mm, fill = species)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(title = "Boxplot of Bill Length by Species")
+```
+
+# Plot scatterplot of bill length vs body mass
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  theme_minimal() +
+  labs(title = "Scatterplot of Bill Length vs Body Mass")
+```

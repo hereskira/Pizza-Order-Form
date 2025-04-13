@@ -1,0 +1,24 @@
+# Load necessary libraries
+install.packages("ggplot2")  # if not installed already
+library(ggplot2)
+library(dplyr)
+
+# Load the dataset
+data <- read.csv("/Users/shakiraregalado/Downloads/IM_2/capstone/RISKFACTORSANDACCESSTOCARE.csv")
+
+# Inspect the dataset
+head(data)
+str(data)
+summary(data)
+
+# Filter out rows with -1111.1 values for Obesity, Diabetes, and High_Blood_Pres
+filtered_data <- data %>%
+  filter(Obesity != -1111.1, Diabetes != -1111.1, High_Blood_Pres != -1111.1)
+
+# Scatter Plot: High Blood Pressure vs. Diabetes by Obesity
+ggplot(filtered_data, aes(x = Obesity, y = Diabetes, color = High_Blood_Pres)) +
+  geom_point() +
+  labs(title = "High Blood Pressure vs. Diabetes by Obesity Status", 
+       x = "Obesity", 
+       y = "Diabetes") +
+  theme_minimal()

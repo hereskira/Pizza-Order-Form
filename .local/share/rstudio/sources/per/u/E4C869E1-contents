@@ -1,0 +1,12 @@
+# Simple R Program: Adding Two Numbers
+# Shakira B. Regalado BSIT 3B
+
+# Define two variables
+num1 <- 5
+num2 <- 10
+
+# Calculate the sum
+sum <- num1 + num2
+
+# Print the result
+print(paste("The sum of", num1, "and", num2, "is", sum))

@@ -1,0 +1,1196 @@
+# Chapter 2: Data
+# Shakira B. Regalado
+# BSIT 3B
+
+# Install necessary libraries
+pkgs <- c("arules", "caret", "factoextra", "GGally", 
+          "ggcorrplot", "hexbin", "palmerpenguins", "plotly", 
+          "proxy", "seriation", "tidyverse")
+
+pkgs_install <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(pkgs_install)) install.packages(pkgs_install)
+
+
+# Types of Data
+
+# Attributes and Measurement
+factor(c("red", "green", "green", "blue"))
+## [1] red   green green blue 
+## Levels: blue green red
+
+ordered(c("S", "L", "M", "S"), 
+        levels = c("S", "M", "L"))
+## [1] S L M S
+## Levels: S < M < L
+
+c(1, 2, 3, 4, 3, 3)
+## [1] 1 2 3 4 3 3
+
+# The Iris Dataset
+library(tidyverse)
+data(iris)
+iris <- as_tibble(iris)
+iris
+## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+##  1          5.1         3.5          1.4         0.2 setosa 
+##  2          4.9         3            1.4         0.2 setosa 
+##  3          4.7         3.2          1.3         0.2 setosa 
+##  4          4.6         3.1          1.5         0.2 setosa 
+##  5          5           3.6          1.4         0.2 setosa 
+##  6          5.4         3.9          1.7         0.4 setosa 
+##  7          4.6         3.4          1.4         0.3 setosa 
+##  8          5           3.4          1.5         0.2 setosa 
+##  9          4.4         2.9          1.4         0.2 setosa 
+## 10          4.9         3.1          1.5         0.1 setosa 
+## # ℹ 140 more rows
+
+print(iris, n = 3, width = Inf)
+## # A tibble: 150 × 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+## 1          5.1         3.5          1.4         0.2 setosa 
+## 2          4.9         3            1.4         0.2 setosa 
+## 3          4.7         3.2          1.3         0.2 setosa 
+## # ℹ 147 more rows
+
+
+# Data Quality
+summary(iris)
+##   Sepal.Length   Sepal.Width    Petal.Length   Petal.Width 
+##  Min.   :4.30   Min.   :2.00   Min.   :1.00   Min.   :0.1  
+##  1st Qu.:5.10   1st Qu.:2.80   1st Qu.:1.60   1st Qu.:0.3  
+##  Median :5.80   Median :3.00   Median :4.35   Median :1.3  
+##  Mean   :5.84   Mean   :3.06   Mean   :3.76   Mean   :1.2  
+##  3rd Qu.:6.40   3rd Qu.:3.30   3rd Qu.:5.10   3rd Qu.:1.8  
+##  Max.   :7.90   Max.   :4.40   Max.   :6.90   Max.   :2.5  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## 
+
+iris |> 
+  summarize(mean = mean(Sepal.Length))
+## # A tibble: 1 × 1
+##    mean
+##   <dbl>
+## 1  5.84
+
+iris |> 
+  summarize(across(where(is.numeric), mean))
+## # A tibble: 1 × 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          <dbl>       <dbl>        <dbl>       <dbl>
+## 1         5.84        3.06         3.76        1.20
+
+library(GGally)
+## Registered S3 method overwritten by 'GGally':
+##   method from   
+##   +.gg   ggplot2
+ggpairs(iris, aes(color = Species), progress = FALSE)
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+
+clean.data <- iris |> 
+  drop_na() |> 
+  unique()
+
+summary(clean.data)
+##   Sepal.Length   Sepal.Width    Petal.Length 
+##  Min.   :4.30   Min.   :2.00   Min.   :1.00  
+##  1st Qu.:5.10   1st Qu.:2.80   1st Qu.:1.60  
+##  Median :5.80   Median :3.00   Median :4.30  
+##  Mean   :5.84   Mean   :3.06   Mean   :3.75  
+##  3rd Qu.:6.40   3rd Qu.:3.30   3rd Qu.:5.10  
+##  Max.   :7.90   Max.   :4.40   Max.   :6.90  
+##   Petal.Width         Species  
+##  Min.   :0.10   setosa    :50  
+##  1st Qu.:0.30   versicolor:50  
+##  Median :1.30   virginica :49  
+##  Mean   :1.19                  
+##  3rd Qu.:1.80                  
+##  Max.   :2.50
+
+
+# Data Preprocessing
+
+# Aggregation
+iris |> 
+  group_by(Species) |> 
+  summarize(across(everything(), mean))
+## # A tibble: 3 × 5
+##   Species  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##   <fct>           <dbl>       <dbl>        <dbl>       <dbl>
+## 1 setosa           5.01        3.43         1.46       0.246
+## 2 versico…         5.94        2.77         4.26       1.33 
+## 3 virgini…         6.59        2.97         5.55       2.03
+iris |> 
+  group_by(Species) |> 
+  summarize(across(everything(), median))
+## # A tibble: 3 × 5
+##   Species  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##   <fct>           <dbl>       <dbl>        <dbl>       <dbl>
+## 1 setosa            5           3.4         1.5          0.2
+## 2 versico…          5.9         2.8         4.35         1.3
+## 3 virgini…          6.5         3           5.55         2
+
+# Random Sampling
+sample(c("A", "B", "C"), size = 10, replace = TRUE)
+##  [1] "C" "A" "C" "C" "C" "B" "A" "A" "C" "B"
+
+take <- sample(seq(nrow(iris)), size = 15)
+take
+##  [1]  99 113 103 119  10 130  67  27  38  79  71  30 138  84
+## [15] 110
+iris[take, ]
+## # A tibble: 15 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+##  1          5.1         2.5          3           1.1 versic…
+##  2          6.8         3            5.5         2.1 virgin…
+##  3          7.1         3            5.9         2.1 virgin…
+##  4          7.7         2.6          6.9         2.3 virgin…
+##  5          4.9         3.1          1.5         0.1 setosa 
+##  6          7.2         3            5.8         1.6 virgin…
+##  7          5.6         3            4.5         1.5 versic…
+##  8          5           3.4          1.6         0.4 setosa 
+##  9          4.9         3.6          1.4         0.1 setosa 
+## 10          6           2.9          4.5         1.5 versic…
+## 11          5.9         3.2          4.8         1.8 versic…
+## 12          4.7         3.2          1.6         0.2 setosa 
+## 13          6.4         3.1          5.5         1.8 virgin…
+## 14          6           2.7          5.1         1.6 versic…
+## 15          7.2         3.6          6.1         2.5 virgin…
+
+set.seed(1000)
+s <- iris |> 
+  slice_sample(n = 15)
+
+library(GGally)
+ggpairs(s, aes(color = Species), progress = FALSE)
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+
+# Stratified Sampling
+set.seed(1000)
+
+s2 <- iris |> 
+  group_by(Species) |>
+  slice_sample(n = 5) |>
+  ungroup()
+
+library(GGally)
+ggpairs(s2, aes(color = Species), progress = FALSE)
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+
+# Principal Components Analysis (PCA
+plotly::plot_ly(iris, 
+                x = ~Sepal.Length, 
+                y = ~Petal.Length, 
+                z = ~Sepal.Width, 
+                color = ~Species, size = 1) |> 
+  plotly::add_markers()
+
+pc <- iris |> 
+  select(-Species) |> 
+  as.matrix() |> 
+  prcomp()
+summary(pc)
+## Importance of components:
+##                          PC1    PC2    PC3     PC4
+## Standard deviation     2.056 0.4926 0.2797 0.15439
+## Proportion of Variance 0.925 0.0531 0.0171 0.00521
+## Cumulative Proportion  0.925 0.9777 0.9948 1.00000
+
+plot(pc, type = "line")
+
+str(pc)
+## List of 5
+##  $ sdev    : num [1:4] 2.056 0.493 0.28 0.154
+##  $ rotation: num [1:4, 1:4] 0.3614 -0.0845 0.8567 0.3583 -0.6566 ...
+##   ..- attr(*, "dimnames")=List of 2
+##   .. ..$ : chr [1:4] "Sepal.Length" "Sepal.Width" "Petal.Length" "Petal.Width"
+##   .. ..$ : chr [1:4] "PC1" "PC2" "PC3" "PC4"
+##  $ center  : Named num [1:4] 5.84 3.06 3.76 1.2
+##   ..- attr(*, "names")= chr [1:4] "Sepal.Length" "Sepal.Width" "Petal.Length" "Petal.Width"
+##  $ scale   : logi FALSE
+##  $ x       : num [1:150, 1:4] -2.68 -2.71 -2.89 -2.75 -2.73 ...
+##   ..- attr(*, "dimnames")=List of 2
+##   .. ..$ : NULL
+##   .. ..$ : chr [1:4] "PC1" "PC2" "PC3" "PC4"
+##  - attr(*, "class")= chr "prcomp"
+
+iris_projected <- as_tibble(pc$x) |> 
+  add_column(Species = iris$Species)
+
+ggplot(iris_projected, aes(x = PC1, y = PC2, color = Species)) + 
+  geom_point()
+
+ggplot(iris_projected, 
+       aes(x = PC1, y = 0, color = Species)) + 
+  geom_point() +
+  scale_y_continuous(expand=c(0,0)) +
+  theme(axis.text.y = element_blank(),
+        axis.title.y = element_blank()
+  )
+
+library(factoextra)
+fviz_pca(pc)
+
+fviz_pca_var(pc)
+
+# Multi-Dimensional Scaling (MDS)
+d <- iris |> 
+  select(-Species) |> 
+  dist()
+
+fit <- cmdscale(d, k = 2)
+colnames(fit) <- c("comp1", "comp2")
+fit <- as_tibble(fit) |> 
+  add_column(Species = iris$Species)
+
+ggplot(fit, aes(x = comp1, y = comp2, color = Species)) + 
+  geom_point()
+
+# Other Nonlinear Dimensionality Reduction Methods
+iris |> 
+  pull(Sepal.Width) |> 
+  cut(breaks = 3)
+##   [1] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+##   [6] (3.6,4.4] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+##  [11] (3.6,4.4] (2.8,3.6] (2.8,3.6] (2.8,3.6] (3.6,4.4]
+##  [16] (3.6,4.4] (3.6,4.4] (2.8,3.6] (3.6,4.4] (3.6,4.4]
+##  [21] (2.8,3.6] (3.6,4.4] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+##  [26] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+##  [31] (2.8,3.6] (2.8,3.6] (3.6,4.4] (3.6,4.4] (2.8,3.6]
+##  [36] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+##  [41] (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6] (3.6,4.4]
+##  [46] (2.8,3.6] (3.6,4.4] (2.8,3.6] (3.6,4.4] (2.8,3.6]
+##  [51] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2,2.8]   (2,2.8]  
+##  [56] (2,2.8]   (2.8,3.6] (2,2.8]   (2.8,3.6] (2,2.8]  
+##  [61] (2,2.8]   (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6]
+##  [66] (2.8,3.6] (2.8,3.6] (2,2.8]   (2,2.8]   (2,2.8]  
+##  [71] (2.8,3.6] (2,2.8]   (2,2.8]   (2,2.8]   (2.8,3.6]
+##  [76] (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6] (2,2.8]  
+##  [81] (2,2.8]   (2,2.8]   (2,2.8]   (2,2.8]   (2.8,3.6]
+##  [86] (2.8,3.6] (2.8,3.6] (2,2.8]   (2.8,3.6] (2,2.8]  
+##  [91] (2,2.8]   (2.8,3.6] (2,2.8]   (2,2.8]   (2,2.8]  
+##  [96] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2,2.8]   (2,2.8]  
+## [101] (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6] (2.8,3.6]
+## [106] (2.8,3.6] (2,2.8]   (2.8,3.6] (2,2.8]   (2.8,3.6]
+## [111] (2.8,3.6] (2,2.8]   (2.8,3.6] (2,2.8]   (2,2.8]  
+## [116] (2.8,3.6] (2.8,3.6] (3.6,4.4] (2,2.8]   (2,2.8]  
+## [121] (2.8,3.6] (2,2.8]   (2,2.8]   (2,2.8]   (2.8,3.6]
+## [126] (2.8,3.6] (2,2.8]   (2.8,3.6] (2,2.8]   (2.8,3.6]
+## [131] (2,2.8]   (3.6,4.4] (2,2.8]   (2,2.8]   (2,2.8]  
+## [136] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6] (2.8,3.6]
+## [141] (2.8,3.6] (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6]
+## [146] (2.8,3.6] (2,2.8]   (2.8,3.6] (2.8,3.6] (2.8,3.6]
+## Levels: (2,2.8] (2.8,3.6] (3.6,4.4]
+
+library(arules)
+## Loading required package: Matrix
+## 
+## Attaching package: 'Matrix'
+## The following objects are masked from 'package:tidyr':
+## 
+##     expand, pack, unpack
+## 
+## Attaching package: 'arules'
+## The following object is masked from 'package:dplyr':
+## 
+##     recode
+## The following objects are masked from 'package:base':
+## 
+##     abbreviate, write
+iris |> pull(Petal.Width) |> 
+  discretize(method = "interval", breaks = 3)
+##   [1] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##   [6] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [11] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [16] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [21] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [26] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [31] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [36] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [41] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [46] [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9) [0.1,0.9)
+##  [51] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [56] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [61] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [66] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [71] [1.7,2.5] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [76] [0.9,1.7) [0.9,1.7) [1.7,2.5] [0.9,1.7) [0.9,1.7)
+##  [81] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [86] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [91] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+##  [96] [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7) [0.9,1.7)
+## [101] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [106] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [111] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [116] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [0.9,1.7)
+## [121] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [126] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [0.9,1.7)
+## [131] [1.7,2.5] [1.7,2.5] [1.7,2.5] [0.9,1.7) [0.9,1.7)
+## [136] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [141] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## [146] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5] [1.7,2.5]
+## attr(,"discretized:breaks")
+## [1] 0.1 0.9 1.7 2.5
+## attr(,"discretized:method")
+## [1] interval
+## Levels: [0.1,0.9) [0.9,1.7) [1.7,2.5]
+
+ggplot(iris, aes(Petal.Width)) + geom_histogram(binwidth = .2) +
+  geom_vline(
+    xintercept = iris |> 
+      pull(Petal.Width) |> 
+      discretize(method = "interval", breaks = 3, onlycuts = TRUE),
+    color = "blue"
+  ) +
+  labs(title = "Discretization: interval", 
+       subtitle = "Blue lines are discretization boundaries")
+
+ggplot(iris, aes(Petal.Width)) + geom_histogram(binwidth = .2) +
+  geom_vline(
+    xintercept = iris |> 
+      pull(Petal.Width) |> 
+      discretize(method = "frequency", breaks = 3, onlycuts = TRUE),
+    color = "blue"
+  ) +
+  labs(title = "Discretization: frequency", 
+       subtitle = "Blue lines are discretization boundaries")
+
+ggplot(iris, aes(Petal.Width)) + geom_histogram(binwidth = .2) +
+  geom_vline(
+    xintercept = iris |> 
+      pull(Petal.Width) |> 
+      discretize(method = "cluster", breaks = 3, onlycuts = TRUE),
+    color = "blue"
+  ) +
+  labs(title = "Discretization: cluster", 
+       subtitle = "Blue lines are discretization boundaries")
+
+# Variable Transformation: Standardization
+scale_numeric <- function(x) 
+  x |> 
+  mutate(across(where(is.numeric), 
+                function(y) (y - mean(y, na.rm = TRUE)) / sd(y, na.rm = TRUE)))
+
+iris.scaled <- iris |> 
+  scale_numeric()
+iris.scaled
+## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+##  1       -0.898      1.02          -1.34       -1.31 setosa 
+##  2       -1.14      -0.132         -1.34       -1.31 setosa 
+##  3       -1.38       0.327         -1.39       -1.31 setosa 
+##  4       -1.50       0.0979        -1.28       -1.31 setosa 
+##  5       -1.02       1.25          -1.34       -1.31 setosa 
+##  6       -0.535      1.93          -1.17       -1.05 setosa 
+##  7       -1.50       0.786         -1.34       -1.18 setosa 
+##  8       -1.02       0.786         -1.28       -1.31 setosa 
+##  9       -1.74      -0.361         -1.34       -1.31 setosa 
+## 10       -1.14       0.0979        -1.28       -1.44 setosa 
+## # ℹ 140 more rows
+summary(iris.scaled)
+##   Sepal.Length      Sepal.Width      Petal.Length   
+##  Min.   :-1.8638   Min.   :-2.426   Min.   :-1.562  
+##  1st Qu.:-0.8977   1st Qu.:-0.590   1st Qu.:-1.222  
+##  Median :-0.0523   Median :-0.132   Median : 0.335  
+##  Mean   : 0.0000   Mean   : 0.000   Mean   : 0.000  
+##  3rd Qu.: 0.6722   3rd Qu.: 0.557   3rd Qu.: 0.760  
+##  Max.   : 2.4837   Max.   : 3.080   Max.   : 1.780  
+##   Petal.Width           Species  
+##  Min.   :-1.442   setosa    :50  
+##  1st Qu.:-1.180   versicolor:50  
+##  Median : 0.132   virginica :50  
+##  Mean   : 0.000                  
+##  3rd Qu.: 0.788                  
+##  Max.   : 1.706
+
+
+# Measures of Similarity and Dissimilarit
+
+# Minkowsky Distance
+iris_sample <- iris.scaled |> 
+  select(-Species) |> 
+  slice(1:5)
+iris_sample
+## # A tibble: 5 × 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          <dbl>       <dbl>        <dbl>       <dbl>
+## 1       -0.898      1.02          -1.34       -1.31
+## 2       -1.14      -0.132         -1.34       -1.31
+## 3       -1.38       0.327         -1.39       -1.31
+## 4       -1.50       0.0979        -1.28       -1.31
+## 5       -1.02       1.25          -1.34       -1.31
+
+dist(iris_sample, method = "euclidean")
+##        1      2      3      4
+## 2 1.1723                     
+## 3 0.8428 0.5216              
+## 4 1.1000 0.4326 0.2829       
+## 5 0.2593 1.3819 0.9883 1.2460
+dist(iris_sample, method = "manhattan")
+##        1      2      3      4
+## 2 1.3887                     
+## 3 1.2280 0.7570              
+## 4 1.5782 0.6484 0.4635       
+## 5 0.3502 1.4973 1.3367 1.6868
+dist(iris_sample, method = "maximum")
+##        1      2      3      4
+## 2 1.1471                     
+## 3 0.6883 0.4589              
+## 4 0.9177 0.3623 0.2294       
+## 5 0.2294 1.3766 0.9177 1.1471
+
+# Distances for Binary Data
+b <- rbind(
+  c(0,0,0,1,1,1,1,0,0,1),
+  c(0,0,1,1,1,0,0,1,0,0)
+)
+b
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,]    0    0    0    1    1    1    1    0    0     1
+## [2,]    0    0    1    1    1    0    0    1    0     0
+b_logical <- apply(b, MARGIN = 2, as.logical)
+b_logical
+##       [,1]  [,2]  [,3] [,4] [,5]  [,6]  [,7]  [,8]  [,9]
+## [1,] FALSE FALSE FALSE TRUE TRUE  TRUE  TRUE FALSE FALSE
+## [2,] FALSE FALSE  TRUE TRUE TRUE FALSE FALSE  TRUE FALSE
+##      [,10]
+## [1,]  TRUE
+## [2,] FALSE
+
+# Hamming Distance
+dist(b, method = "manhattan")
+##   1
+## 2 5
+dist(b, method = "euclidean")^2
+##   1
+## 2 5
+
+# Jaccard Index
+dist(b, method = "binary")
+##        1
+## 2 0.7143
+
+# Distances for Mixed Data
+people <- tibble(
+  height = c(      160,    185,    170),
+  weight = c(       52,     90,     75),
+  sex    = c( "female", "male", "male")
+)
+people
+## # A tibble: 3 × 3
+##   height weight sex   
+##    <dbl>  <dbl> <chr> 
+## 1    160     52 female
+## 2    185     90 male  
+## 3    170     75 male
+
+people <- people |> 
+  mutate(across(where(is.character), factor))
+people
+## # A tibble: 3 × 3
+##   height weight sex   
+##    <dbl>  <dbl> <fct> 
+## 1    160     52 female
+## 2    185     90 male  
+## 3    170     75 male
+
+# Gower’s Coefficient
+library(proxy)
+## 
+## Attaching package: 'proxy'
+## The following object is masked from 'package:Matrix':
+## 
+##     as.matrix
+## The following objects are masked from 'package:stats':
+## 
+##     as.dist, dist
+## The following object is masked from 'package:base':
+## 
+##     as.matrix
+d_Gower <- dist(people, method = "Gower")
+d_Gower
+##        1      2
+## 2 1.0000       
+## 3 0.6684 0.3316
+
+# Using Euclidean Distance with Mixed Data
+library(caret)
+## Loading required package: lattice
+## 
+## Attaching package: 'caret'
+## The following object is masked from 'package:purrr':
+## 
+##     lift
+data_dummy <- dummyVars(~., people) |> 
+  predict(people)
+data_dummy
+##   height weight sex.female sex.male
+## 1    160     52          1        0
+## 2    185     90          0        1
+## 3    170     75          0        1
+
+weight_matrix <- matrix(c(1, 1, 1/2, 1/2), 
+                        ncol = 4, 
+                        nrow = nrow(data_dummy), 
+                        byrow = TRUE)
+data_dummy_scaled <- scale(data_dummy) * weight_matrix
+
+d_dummy <- dist(data_dummy_scaled)
+d_dummy
+##       1     2
+## 2 3.064      
+## 3 1.891 1.427
+
+ggplot(tibble(d_dummy, d_Gower), aes(x = d_dummy, y = d_Gower)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+## Don't know how to automatically pick scale for object of
+## type <dist>. Defaulting to continuous.
+## Don't know how to automatically pick scale for object of
+## type <dist>. Defaulting to continuous.
+## `geom_smooth()` using formula = 'y ~ x'
+
+# More Proximity Measure
+library(proxy)
+pr_DB$get_entry_names()
+##  [1] "Jaccard"         "Kulczynski1"     "Kulczynski2"    
+##  [4] "Mountford"       "Fager"           "Russel"         
+##  [7] "simple matching" "Hamman"          "Faith"          
+## [10] "Tanimoto"        "Dice"            "Phi"            
+## [13] "Stiles"          "Michael"         "Mozley"         
+## [16] "Yule"            "Yule2"           "Ochiai"         
+## [19] "Simpson"         "Braun-Blanquet"  "cosine"         
+## [22] "angular"         "eJaccard"        "eDice"          
+## [25] "correlation"     "Chi-squared"     "Phi-squared"    
+## [28] "Tschuprow"       "Cramer"          "Pearson"        
+## [31] "Gower"           "Euclidean"       "Mahalanobis"    
+## [34] "Bhjattacharyya"  "Manhattan"       "supremum"       
+## [37] "Minkowski"       "Canberra"        "Wave"           
+## [40] "divergence"      "Kullback"        "Bray"           
+## [43] "Soergel"         "Levenshtein"     "Podani"         
+## [46] "Chord"           "Geodesic"        "Whittaker"      
+## [49] "Hellinger"       "fJaccard"
+
+
+# Data Exploration
+
+library(tidyverse)
+data(iris)
+iris <- as_tibble(iris)
+iris
+## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+##  1          5.1         3.5          1.4         0.2 setosa 
+##  2          4.9         3            1.4         0.2 setosa 
+##  3          4.7         3.2          1.3         0.2 setosa 
+##  4          4.6         3.1          1.5         0.2 setosa 
+##  5          5           3.6          1.4         0.2 setosa 
+##  6          5.4         3.9          1.7         0.4 setosa 
+##  7          4.6         3.4          1.4         0.3 setosa 
+##  8          5           3.4          1.5         0.2 setosa 
+##  9          4.4         2.9          1.4         0.2 setosa 
+## 10          4.9         3.1          1.5         0.1 setosa 
+## # ℹ 140 more rows
+
+# Basic statistics
+summary(iris)
+##   Sepal.Length   Sepal.Width    Petal.Length   Petal.Width 
+##  Min.   :4.30   Min.   :2.00   Min.   :1.00   Min.   :0.1  
+##  1st Qu.:5.10   1st Qu.:2.80   1st Qu.:1.60   1st Qu.:0.3  
+##  Median :5.80   Median :3.00   Median :4.35   Median :1.3  
+##  Mean   :5.84   Mean   :3.06   Mean   :3.76   Mean   :1.2  
+##  3rd Qu.:6.40   3rd Qu.:3.30   3rd Qu.:5.10   3rd Qu.:1.8  
+##  Max.   :7.90   Max.   :4.40   Max.   :6.90   Max.   :2.5  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50  
+##                 
+##                 
+## 
+
+iris |> 
+  summarize(avg_Sepal.Length = mean(Sepal.Length), 
+            sd_Sepal.Length = sd(Sepal.Length))
+## # A tibble: 1 × 2
+##   avg_Sepal.Length sd_Sepal.Length
+##              <dbl>           <dbl>
+## 1             5.84           0.828
+
+mean(c(1, 2, NA, 3, 4, 5))
+## [1] NA
+mean(c(1, 2, NA, 3, 4, 5),  na.rm = TRUE)
+## [1] 3
+
+iris |>
+  summarize(
+    avg_Sepal.Length = mean(Sepal.Length),
+    trimmed_avg_Sepal.Length = mean(Sepal.Length, trim = .1)
+  )
+## # A tibble: 1 × 2
+##   avg_Sepal.Length trimmed_avg_Sepal.Length
+##              <dbl>                    <dbl>
+## 1             5.84                     5.81
+
+iris |> summarize(across(where(is.numeric), mean))
+## # A tibble: 1 × 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          <dbl>       <dbl>        <dbl>       <dbl>
+## 1         5.84        3.06         3.76        1.20
+iris |> summarize(across(where(is.numeric), sd))
+## # A tibble: 1 × 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          <dbl>       <dbl>        <dbl>       <dbl>
+## 1        0.828       0.436         1.77       0.762
+iris |> summarize(across(where(is.numeric), 
+                         list(min = min, 
+                              median = median, 
+                              max = max)))
+## # A tibble: 1 × 12
+##   Sepal.Length_min Sepal.Length_median Sepal.Length_max
+##              <dbl>               <dbl>            <dbl>
+## 1              4.3                 5.8              7.9
+## # ℹ 9 more variables: Sepal.Width_min <dbl>,
+## #   Sepal.Width_median <dbl>, Sepal.Width_max <dbl>,
+## #   Petal.Length_min <dbl>, Petal.Length_median <dbl>,
+## #   Petal.Length_max <dbl>, Petal.Width_min <dbl>,
+## #   Petal.Width_median <dbl>, Petal.Width_max <dbl>
+
+iris |> summarize(across(where(is.numeric), mad))
+## # A tibble: 1 × 4
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width
+##          <dbl>       <dbl>        <dbl>       <dbl>
+## 1         1.04       0.445         1.85        1.04
+
+# Grouped Operations and Calculations
+iris |> 
+  group_by(Species) |> 
+  summarize(across(Sepal.Length, mean))
+## # A tibble: 3 × 2
+##   Species    Sepal.Length
+##   <fct>             <dbl>
+## 1 setosa             5.01
+## 2 versicolor         5.94
+## 3 virginica          6.59
+iris |> 
+  group_by(Species) |> 
+  summarize(across(where(is.numeric), mean))
+## # A tibble: 3 × 5
+##   Species  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##   <fct>           <dbl>       <dbl>        <dbl>       <dbl>
+## 1 setosa           5.01        3.43         1.46       0.246
+## 2 versico…         5.94        2.77         4.26       1.33 
+## 3 virgini…         6.59        2.97         5.55       2.03
+
+res.aov <- aov(Sepal.Length ~ Species, data = iris)
+summary(res.aov)
+##              Df Sum Sq Mean Sq F value Pr(>F)    
+## Species       2   63.2   31.61     119 <2e-16 ***
+## Residuals   147   39.0    0.27                   
+## ---
+## Signif. codes:  
+## 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+TukeyHSD(res.aov)
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = Sepal.Length ~ Species, data = iris)
+## 
+## $Species
+##                       diff    lwr    upr p adj
+## versicolor-setosa    0.930 0.6862 1.1738     0
+## virginica-setosa     1.582 1.3382 1.8258     0
+## virginica-versicolor 0.652 0.4082 0.8958     0
+
+# Tabulate data
+iris |> 
+  group_by(Species) |> 
+  summarize(n())
+## # A tibble: 3 × 2
+##   Species    `n()`
+##   <fct>      <int>
+## 1 setosa        50
+## 2 versicolor    50
+## 3 virginica     50
+
+iris_ord <- iris |> 
+  mutate(across(where(is.numeric),  
+                function(x) cut(x, 3, labels = c("short", "medium", "long"), 
+                                ordered = TRUE)))
+
+iris_ord
+## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##    <ord>        <ord>       <ord>        <ord>       <fct>  
+##  1 short        medium      short        short       setosa 
+##  2 short        medium      short        short       setosa 
+##  3 short        medium      short        short       setosa 
+##  4 short        medium      short        short       setosa 
+##  5 short        medium      short        short       setosa 
+##  6 short        long        short        short       setosa 
+##  7 short        medium      short        short       setosa 
+##  8 short        medium      short        short       setosa 
+##  9 short        medium      short        short       setosa 
+## 10 short        medium      short        short       setosa 
+## # ℹ 140 more rows
+summary(iris_ord)
+##  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##  short :59    short :47   short :50    short :50  
+##  medium:71    medium:88   medium:54    medium:54  
+##  long  :20    long  :15   long  :46    long  :46  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50
+
+tbl <- iris_ord |> 
+  select(Sepal.Length, Species) |> 
+  table()
+tbl
+##             Species
+## Sepal.Length setosa versicolor virginica
+##       short      47         11         1
+##       medium      3         36        32
+##       long        0          3        17
+
+iris_ord |>
+  select(Species, Sepal.Length) |>
+  ### Relationship Between Nominal and Ordinal Features
+  pivot_longer(cols = Sepal.Length) |>
+  group_by(Species, value) |> 
+  count() |> 
+  ungroup() |>
+  pivot_wider(names_from = Species, values_from = n)
+## # A tibble: 3 × 4
+##   value  setosa versicolor virginica
+##   <ord>   <int>      <int>     <int>
+## 1 short      47         11         1
+## 2 medium      3         36        32
+## 3 long       NA          3        17
+
+tbl |> 
+  chisq.test()
+## 
+##  Pearson's Chi-squared test
+## 
+## data:  tbl
+## X-squared = 112, df = 4, p-value <2e-16
+
+fisher.test(tbl)
+## 
+##  Fisher's Exact Test for Count Data
+## 
+## data:  tbl
+## p-value <2e-16
+## alternative hypothesis: two.sided
+
+# Percentiles (Quantiles)
+iris |> 
+  pull(Petal.Length) |> 
+  quantile()
+##   0%  25%  50%  75% 100% 
+## 1.00 1.60 4.35 5.10 6.90
+
+iris |> 
+  summarize(IQR = 
+              quantile(Petal.Length, probs = 0.75) - 
+              quantile(Petal.Length, probs = 0.25))
+## # A tibble: 1 × 1
+##     IQR
+##   <dbl>
+## 1   3.5
+
+
+# Correlation
+
+# Pearson Correlation
+cc <- iris |> 
+  select(-Species) |> 
+  cor()
+cc
+##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Length       1.0000     -0.1176       0.8718
+## Sepal.Width       -0.1176      1.0000      -0.4284
+## Petal.Length       0.8718     -0.4284       1.0000
+## Petal.Width        0.8179     -0.3661       0.9629
+##              Petal.Width
+## Sepal.Length      0.8179
+## Sepal.Width      -0.3661
+## Petal.Length      0.9629
+## Petal.Width       1.0000
+
+ggplot(iris, aes(Petal.Length, Petal.Width)) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+## `geom_smooth()` using formula = 'y ~ x'
+
+with(iris, cor(Petal.Length, Petal.Width))
+## [1] 0.9629
+
+with(iris, cor.test(Petal.Length, Petal.Width))
+## 
+##  Pearson's product-moment correlation
+## 
+## data:  Petal.Length and Petal.Width
+## t = 43, df = 148, p-value <2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.9491 0.9730
+## sample estimates:
+##    cor 
+## 0.9629
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width)) + 
+  geom_point() +   
+  geom_smooth(method = "lm") 
+## `geom_smooth()` using formula = 'y ~ x'
+
+with(iris, cor(Sepal.Length, Sepal.Width)) 
+## [1] -0.1176
+with(iris, cor.test(Sepal.Length, Sepal.Width))
+## 
+##  Pearson's product-moment correlation
+## 
+## data:  Sepal.Length and Sepal.Width
+## t = -1.4, df = 148, p-value = 0.2
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.27269  0.04351
+## sample estimates:
+##     cor 
+## -0.1176
+
+# Rank Correlation
+iris_ord <- iris |> 
+  mutate(across(where(is.numeric), 
+                function(x) cut(x, 3, 
+                                labels = c("short", "medium", "long"), 
+                                ordered = TRUE)))
+
+iris_ord
+## # A tibble: 150 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##    <ord>        <ord>       <ord>        <ord>       <fct>  
+##  1 short        medium      short        short       setosa 
+##  2 short        medium      short        short       setosa 
+##  3 short        medium      short        short       setosa 
+##  4 short        medium      short        short       setosa 
+##  5 short        medium      short        short       setosa 
+##  6 short        long        short        short       setosa 
+##  7 short        medium      short        short       setosa 
+##  8 short        medium      short        short       setosa 
+##  9 short        medium      short        short       setosa 
+## 10 short        medium      short        short       setosa 
+## # ℹ 140 more rows
+summary(iris_ord)
+##  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##  short :59    short :47   short :50    short :50  
+##  medium:71    medium:88   medium:54    medium:54  
+##  long  :20    long  :15   long  :46    long  :46  
+##        Species  
+##  setosa    :50  
+##  versicolor:50  
+##  virginica :50
+iris_ord |> 
+  pull(Sepal.Length)
+##   [1] short  short  short  short  short  short  short 
+##   [8] short  short  short  short  short  short  short 
+##  [15] medium medium short  short  medium short  short 
+##  [22] short  short  short  short  short  short  short 
+##  [29] short  short  short  short  short  short  short 
+##  [36] short  short  short  short  short  short  short 
+##  [43] short  short  short  short  short  short  short 
+##  [50] short  long   medium long   short  medium medium
+##  [57] medium short  medium short  short  medium medium
+##  [64] medium medium medium medium medium medium medium
+##  [71] medium medium medium medium medium medium long  
+##  [78] medium medium medium short  short  medium medium
+##  [85] short  medium medium medium medium short  short 
+##  [92] medium medium short  medium medium medium medium
+##  [99] short  medium medium medium long   medium medium
+## [106] long   short  long   medium long   medium medium
+## [113] long   medium medium medium medium long   long  
+## [120] medium long   medium long   medium medium long  
+## [127] medium medium medium long   long   long   medium
+## [134] medium medium long   medium medium medium long  
+## [141] medium long   medium long   medium medium medium
+## [148] medium medium medium
+## Levels: short < medium < long
+
+iris_ord |> 
+  select(-Species) |> 
+  sapply(xtfrm) |> 
+  cor(method = "kendall")
+##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Length       1.0000     -0.1438       0.7419
+## Sepal.Width       -0.1438      1.0000      -0.3299
+## Petal.Length       0.7419     -0.3299       1.0000
+## Petal.Width        0.7295     -0.3154       0.9198
+##              Petal.Width
+## Sepal.Length      0.7295
+## Sepal.Width      -0.3154
+## Petal.Length      0.9198
+## Petal.Width       1.0000
+
+iris_ord |> 
+  select(-Species) |> 
+  sapply(xtfrm) |> 
+  cor(method = "spearman")
+##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Length       1.0000     -0.1570       0.7938
+## Sepal.Width       -0.1570      1.0000      -0.3663
+## Petal.Length       0.7938     -0.3663       1.0000
+## Petal.Width        0.7843     -0.3517       0.9399
+##              Petal.Width
+## Sepal.Length      0.7843
+## Sepal.Width      -0.3517
+## Petal.Length      0.9399
+## Petal.Width       1.0000
+
+iris |> 
+  select(-Species) |> 
+  cor()
+##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Length       1.0000     -0.1176       0.8718
+## Sepal.Width       -0.1176      1.0000      -0.4284
+## Petal.Length       0.8718     -0.4284       1.0000
+## Petal.Width        0.8179     -0.3661       0.9629
+##              Petal.Width
+## Sepal.Length      0.8179
+## Sepal.Width      -0.3661
+## Petal.Length      0.9629
+## Petal.Width       1.0000
+
+
+# Density
+ggplot(iris, aes(x = Petal.Length, y = 0)) + geom_point()
+
+# Histograms
+ggplot(iris, aes(x = Petal.Length)) +
+  geom_histogram() +
+  geom_rug(alpha = 1/2)
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_bin2d(bins = 10) +
+  geom_jitter(color = "red")
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_hex(bins = 10) +
+  geom_jitter(color = "red")
+
+# Kernel Density Estimate (KDE)
+ggplot(iris, aes(Petal.Length)) +
+  geom_density(bw = .2) +
+  geom_rug(alpha = 1/2)
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_density_2d_filled() +
+  geom_jitter()
+
+
+# Visualization
+
+# Histogram
+ggplot(iris, aes(Petal.Width)) + geom_histogram(bins = 20)
+
+ggplot(iris, aes(Petal.Width)) + 
+  geom_histogram(bins = 20, aes(fill = Species))
+
+ggplot(iris, aes(Petal.Width)) + 
+  geom_histogram(bins = 20, aes(fill = Species), alpha = .5, position = 'identity')
+
+# Boxplot
+ggplot(iris, aes(Species, Sepal.Length)) + 
+  geom_boxplot()
+
+iris |> group_by(Species) |> 
+  summarize(across(where(is.numeric), median))
+## # A tibble: 3 × 5
+##   Species  Sepal.Length Sepal.Width Petal.Length Petal.Width
+##   <fct>           <dbl>       <dbl>        <dbl>       <dbl>
+## 1 setosa            5           3.4         1.5          0.2
+## 2 versico…          5.9         2.8         4.35         1.3
+## 3 virgini…          6.5         3           5.55         2
+
+library(tidyr)
+iris_long <- iris |> 
+  mutate(id = row_number()) |> 
+  pivot_longer(1:4)
+
+ggplot(iris_long, aes(name, value)) + 
+  geom_boxplot() +
+  labs(y = "Original value")
+
+library(tidyr)
+iris_long_scaled <- iris |> 
+  scale_numeric() |> 
+  mutate(id = row_number()) |> pivot_longer(1:4)
+
+ggplot(iris_long_scaled, aes(name, value)) + 
+  geom_boxplot() +
+  labs(y = "Scaled value")
+
+# Scatter plot
+ggplot(iris, aes(x = Petal.Length, y = Sepal.Length)) + 
+  geom_point(aes(color = Species))
+
+ggplot(iris, aes(x = Petal.Length, y = Sepal.Length)) + 
+  geom_point(aes(color = Species)) +  
+  geom_smooth(method = "lm")
+## `geom_smooth()` using formula = 'y ~ x'
+
+ggplot(iris, aes(x = Petal.Length, y = Sepal.Length)) + 
+  geom_point(aes(color = Species)) +  
+  geom_smooth(method = "lm", aes(color = Species))
+## `geom_smooth()` using formula = 'y ~ x'
+
+# Scatter Plot Matrix
+pairs(iris, col = iris$Species)
+
+library("GGally")
+ggpairs(iris,  aes(color = Species), progress = FALSE)
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.
+
+# Matrix Visualization
+iris_matrix <- iris |> select(-Species) |> as.matrix()
+
+iris_long <- as_tibble(iris_matrix) |> 
+  mutate(id = row_number()) |> 
+  pivot_longer(1:4)
+
+head(iris_long)
+## # A tibble: 6 × 3
+##      id name         value
+##   <int> <chr>        <dbl>
+## 1     1 Sepal.Length   5.1
+## 2     1 Sepal.Width    3.5
+## 3     1 Petal.Length   1.4
+## 4     1 Petal.Width    0.2
+## 5     2 Sepal.Length   4.9
+## 6     2 Sepal.Width    3
+ggplot(iris_long, aes(x = name, y = id)) + 
+  geom_tile(aes(fill = value))
+
+library(seriation)
+## Registered S3 methods overwritten by 'registry':
+##   method               from 
+##   print.registry_field proxy
+##   print.registry_entry proxy
+## 
+## Attaching package: 'seriation'
+## The following object is masked from 'package:lattice':
+## 
+##     panel.lines
+ggpimage(iris_matrix, prop = FALSE)
+
+iris_scaled <- scale(iris_matrix)
+ggpimage(iris_scaled, prop = FALSE)
+
+ggpimage(iris_scaled, order = seriate(iris_scaled), prop = FALSE)
+
+# Correlation Matrix
+cm1 <- iris |> 
+  select(-Species) |> 
+  as.matrix() |> 
+  cor()
+cm1
+##              Sepal.Length Sepal.Width Petal.Length
+## Sepal.Length       1.0000     -0.1176       0.8718
+## Sepal.Width       -0.1176      1.0000      -0.4284
+## Petal.Length       0.8718     -0.4284       1.0000
+## Petal.Width        0.8179     -0.3661       0.9629
+##              Petal.Width
+## Sepal.Length      0.8179
+## Sepal.Width      -0.3661
+## Petal.Length      0.9629
+## Petal.Width       1.0000
+
+library(ggcorrplot)
+ggcorrplot(cm1)
+
+gghmap(cm1, prop = TRUE)
+
+cm2 <- iris |> 
+  select(-Species) |> 
+  as.matrix() |> 
+  t() |> 
+  cor()
+
+ggcorrplot(cm2)
+
+# Parallel Coordinates Plot
+library(GGally)
+ggparcoord(iris, columns = 1:4, groupColumn = 5)
+
+o <- seriate(as.dist(1-cor(iris[,1:4])), method = "BBURCG")
+get_order(o)
+## Petal.Length  Petal.Width Sepal.Length  Sepal.Width 
+##            3            4            1            2
+ggparcoord(iris, 
+           columns = as.integer(get_order(o)), 
+           groupColumn = 5)
+
+# Star Plot
+flowers_5 <- iris[c(1:5, 51:55, 101:105), ]
+flowers_5
+## # A tibble: 15 × 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
+##  1          5.1         3.5          1.4         0.2 setosa 
+##  2          4.9         3            1.4         0.2 setosa 
+##  3          4.7         3.2          1.3         0.2 setosa 
+##  4          4.6         3.1          1.5         0.2 setosa 
+##  5          5           3.6          1.4         0.2 setosa 
+##  6          7           3.2          4.7         1.4 versic…
+##  7          6.4         3.2          4.5         1.5 versic…
+##  8          6.9         3.1          4.9         1.5 versic…
+##  9          5.5         2.3          4           1.3 versic…
+## 10          6.5         2.8          4.6         1.5 versic…
+## 11          6.3         3.3          6           2.5 virgin…
+## 12          5.8         2.7          5.1         1.9 virgin…
+## 13          7.1         3            5.9         2.1 virgin…
+## 14          6.3         2.9          5.6         1.8 virgin…
+## 15          6.5         3            5.8         2.2 virgin…
+stars(flowers_5[, 1:4], ncol = 5)
+
+

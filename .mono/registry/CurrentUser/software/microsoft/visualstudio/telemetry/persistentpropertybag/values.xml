@@ -1,0 +1,7 @@
+﻿<values>
+  <value name="mac.address" type="string">s:fe94184fa1ef65430434eae39bfbc024a90b7baa6f552ac316fdf71ab76a28b9</value>
+  <value name="VS.TelemetryApi.TotalDisposeLatency" type="int">20</value>
+  <value name="VS.TelemetryApi.ChannelsDisposeLatency" type="int">4</value>
+  <value name="mac.info.provider.version" type="string">s:1</value>
+  <value name="VS.TelemetryApi.DroppedEventsDuringDisposing" type="int">0</value>
+</values>

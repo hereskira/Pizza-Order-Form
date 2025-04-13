@@ -1,0 +1,90 @@
+---
+title: "Palmer Penguin Species Prediction"
+author: "Shakira Regalado"
+date: "2024-11-18"
+output: html_document
+---
+
+## 1. Introduction
+
+In this exercise, we'll use the Palmer penguin data to predict species using a decision tree model. We will explore hyperparameter tuning, visualize the tree, calculate variable importance, and evaluate model performance using a test set.
+
+## 2. Load the Data
+```{r}
+# Load necessary libraries
+library(palmerpenguins)
+library(rpart)
+library(caret)
+
+# Check the first few rows of the data
+head(penguins)
+```
+
+## 3. Split the Data
+```{r}
+# Set a seed for reproducibility
+set.seed(42)
+
+# Split the data into training and test sets
+trainIndex <- createDataPartition(penguins$species, p = 0.8, list = FALSE)
+trainData <- penguins[trainIndex, ]
+testData <- penguins[-trainIndex, ]
+
+# Check the dimensions of the training and test sets
+dim(trainData)
+dim(testData)
+```
+
+## 4. Handling Missing Values
+```{r}
+# Impute missing values only for numeric columns using the median
+trainData[] <- lapply(trainData, function(x) {
+  if(is.numeric(x)) {
+    return(ifelse(is.na(x), median(x, na.rm = TRUE), x))
+  } else {
+    return(x)
+  }
+})
+
+testData[] <- lapply(testData, function(x) {
+  if(is.numeric(x)) {
+    return(ifelse(is.na(x), median(x, na.rm = TRUE), x))
+  } else {
+    return(x)
+  }
+})
+```
+
+## 5. Train the Decision Tree Model
+```{r}
+# Train the decision tree model with hyperparameter tuning
+model <- rpart(species ~ bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g + sex + island, 
+               data = trainData, 
+               control = rpart.control(minsplit = 20, tuneLength = 5))
+
+# Check the model summary
+summary(model)
+```
+
+## 6. Visualize the Tree
+```{r}
+# Plot the decision tree
+library(rpart.plot)
+rpart.plot(model)
+```
+
+## 7. Variable Importance
+```{r}
+# Get the variable importance using caret's varImp() function
+library(caret)
+varImp(model)
+```
+
+## 8. Evaluate the Model on the Test Set
+```{r}
+# Make predictions on the test set
+predictions <- predict(model, testData, type = "class")
+
+# Confusion matrix to evaluate the model's accuracy
+confusionMatrix(predictions, testData$species)
+```

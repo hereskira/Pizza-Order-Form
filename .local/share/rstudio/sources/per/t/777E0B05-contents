@@ -1,0 +1,173 @@
+# Chapter 1: Introduction
+# Shakira B. Regalado
+# BSIT 3B
+
+# Install necessary libraries
+pkgs <- c('tidyverse')
+
+pkgs_install <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(pkgs_install)) install.packages(pkgs_install)
+
+# Vectors
+x <- c(10.4, 5.6, Inf, NA, 21.7)
+x
+## [1] 10.4  5.6  Inf   NA 21.7
+
+3:10
+## [1]  3  4  5  6  7  8  9 10
+
+y <- seq(from = 0, to = 1, length.out = 5)
+y
+## [1] 0.00 0.25 0.50 0.75 1.00
+
+
+# Vectorized Operations
+x + 1
+## [1] 11.4  6.6  Inf   NA 22.7
+
+x > y
+## [1] TRUE TRUE TRUE   NA TRUE
+
+
+# Subsetting Vectors
+x[1:3]
+## [1] 10.4  5.6  Inf
+
+x[-1]
+## [1]  5.6  Inf   NA 21.7
+
+is.na(x)
+## [1] FALSE FALSE FALSE  TRUE FALSE
+x[!is.na(x)] # select all non-missing values
+## [1] 10.4  5.6  Inf 21.7
+
+x[!is.finite(x)] <- NA
+x
+## [1] 10.4  5.6   NA   NA 21.7
+
+
+# Functions
+inc <- function(x, by = 1) { 
+  x + by 
+}
+
+inc(x, by = 2)
+## [1] 12.4  7.6   NA   NA 23.7
+
+
+# Strings
+string <- c("Hello", "Goodbye")
+string
+## [1] "Hello"   "Goodbye"
+
+paste(string, "World!")
+## [1] "Hello World!"   "Goodbye World!"
+
+
+# Plotting
+plot(x, y)
+
+
+# Objects
+x
+## [1] 10.4  5.6   NA   NA 21.7
+
+summary(x)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     5.6     8.0    10.4    12.6    16.1    21.7       2
+
+class(x)
+## [1] "numeric"
+
+str(x)
+##  num [1:5] 10.4 5.6 NA NA 21.7
+
+
+# Tidyverse
+library(tidyverse)
+## ── Attaching core tidyverse packages ──── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+
+# Tibbles
+fruit <- tibble(
+  name = c("apple", "banana", "mango", "orange", "lime"), 
+  price = c(2.5, 2.0, 4.0, 3.5, 2.5), 
+  vitamin_c = c(20, 45, 130, 250, 132),
+  type = c("pome", "tropical", "tropical", "citrus", "citrus"))
+fruit
+## # A tibble: 5 × 4
+##   name   price vitamin_c type    
+##   <chr>  <dbl>     <dbl> <chr>   
+## 1 apple    2.5        20 pome    
+## 2 banana   2          45 tropical
+## 3 mango    4         130 tropical
+## 4 orange   3.5       250 citrus  
+## 5 lime     2.5       132 citrus
+
+
+# Transformations
+affordable_vitamin_c_sources <- fruit |>
+  mutate(vitamin_c_per_dollar = vitamin_c / price) |> 
+  filter(vitamin_c_per_dollar > 20) |>
+  arrange(desc(vitamin_c_per_dollar))
+
+affordable_vitamin_c_sources 
+## # A tibble: 4 × 5
+##   name   price vitamin_c type     vitamin_c_per_dollar
+##   <chr>  <dbl>     <dbl> <chr>                   <dbl>
+## 1 orange   3.5       250 citrus                   71.4
+## 2 lime     2.5       132 citrus                   52.8
+## 3 mango    4         130 tropical                 32.5
+## 4 banana   2          45 tropical                 22.5
+
+affordable_vitamin_c_sources |> 
+  summarize(min = min(price), 
+            mean = mean(price), 
+            max = max(price))
+## # A tibble: 1 × 3
+##     min  mean   max
+##   <dbl> <dbl> <dbl>
+## 1     2     3     4
+
+affordable_vitamin_c_sources |> 
+  group_by(type) |>
+  summarize(min = min(price), 
+            mean = mean(price), 
+            max = max(price))
+## # A tibble: 2 × 4
+##   type       min  mean   max
+##   <chr>    <dbl> <dbl> <dbl>
+## 1 citrus     2.5     3   3.5
+## 2 tropical   2       3   4
+
+affordable_vitamin_c_sources |> 
+  summarize(across(c(price, vitamin_c), mean))
+## # A tibble: 1 × 2
+##   price vitamin_c
+##   <dbl>     <dbl>
+## 1     3      139.
+
+
+# ggplot2
+# ggplot(data, mapping = aes(x = ..., y = ..., color = ...)) +
+ # geom_point()
+
+ggplot(fruit, aes(x = price, y = vitamin_c)) + 
+  geom_point()
+
+ggplot(fruit, aes(x = price, y = vitamin_c)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+## `geom_smooth()` using formula = 'y ~ x'
+
+ggplot(fruit, aes(x = name, y = vitamin_c)) + 
+  geom_bar(stat = "identity")

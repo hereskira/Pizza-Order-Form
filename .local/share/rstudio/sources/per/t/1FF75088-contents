@@ -1,0 +1,29 @@
+# Load required libraries
+install.packages("ggplot2")  # if not installed already
+library(ggplot2)
+
+# Load the dataset
+data <- read.csv("/Users/shakiraregalado/Downloads/IM_2/capstone/ObesityDataSet_raw_and_data_sinthetic.csv")
+
+# Inspect the dataset
+head(data)
+str(data)
+summary(data)
+
+# Bar Plot: Gender Distribution
+ggplot(data, aes(x = Gender)) +
+  geom_bar(fill = "skyblue") +
+  labs(title = "Gender Distribution", x = "Gender", y = "Count") +
+  theme_minimal()
+
+# Scatter Plot: Age vs. Gender by Family History of Overweight
+ggplot(data, aes(x = Age, y = Gender, color = family_history_with_overweight)) +
+  geom_point() +
+  labs(title = "Age vs. Gender by Family History of Overweight", x = "Age", y = "Weight") +
+  theme_minimal()
+
+# Box Plot: Weight by High-Caloric Food Consumption (FAVC)
+ggplot(data, aes(x = FAVC, y = Weight)) +
+  geom_boxplot(fill = "orange") +
+  labs(title = "Weight by High-Caloric Food Consumption", x = "High-Caloric Food Consumption", y = "Weight") +
+  theme_minimal()
